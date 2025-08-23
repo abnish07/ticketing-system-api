@@ -1,11 +1,44 @@
 {
-  "name": "ticketing-system-api",
+  "name": "authenticator_api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "node --test"
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
   },
-  "author": "",
-  "license": "ISC"
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "prepare": "prisma generate",
+    "migrate:dev": "prisma migrate dev",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@prisma/client": "latest",
+    "bcryptjs": "latest",
+    "cookie-parser": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "helmet": "latest",
+    "jsonwebtoken": "latest",
+    "nodemailer": "latest",
+    "pino": "latest",
+    "qrcode": "latest",
+    "rate-limiter-flexible": "latest",
+    "speakeasy": "latest",
+    "uuid": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-standard": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-n": "latest",
+    "nodemon": "latest",
+    "prettier": "latest",
+    "prisma": "latest"
+  }
 }
+
