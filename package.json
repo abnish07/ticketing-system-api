@@ -26,6 +26,8 @@
     "mongoose": "^6.13.3",
     "multer": "^1.4.3",
     "mysql2": "^3.11.3",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "winston": "latest",
+    "winston-transport": "latest"
   }
 }
