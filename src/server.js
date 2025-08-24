@@ -8,6 +8,7 @@ import errorHandler from './middleware/error.js'
 import authRouter from './routes/auth.js'
 import { connectDb } from './db/index.js'
 import './models/associations.js'
+import logger from './lib/logger.js'
 
 const app = express()
 app.set('trust proxy', 1)
@@ -22,5 +23,5 @@ app.use(errorHandler)
 
 const PORT = process.env.PORT || 4000
 connectDb().then(() => {
-  app.listen(PORT, () => console.log(`API listening on :${PORT}`))
+  app.listen(PORT, () => logger.info(`API listening on :${PORT}`))
 })
