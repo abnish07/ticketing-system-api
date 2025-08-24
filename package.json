@@ -28,6 +28,7 @@
     "mysql2": "^3.11.3",
     "nodemon": "^3.1.7",
     "winston": "latest",
-    "winston-transport": "latest"
+    "winston-transport": "latest",
+    "zod": "latest"
   }
 }
